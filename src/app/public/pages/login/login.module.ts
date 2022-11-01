@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { LoginFormComponent } from '../../components/login-form/login-form.component';
 import { LoginNewhereComponent } from '../../components/login-newhere/login-newhere.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginNewhereComponent } from '../../components/login-newhere/login-newh
   imports: [
     CommonModule,
     LoginRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ]
 })
 export class LoginModule { }

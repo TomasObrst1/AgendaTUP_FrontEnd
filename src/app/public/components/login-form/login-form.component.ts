@@ -3,6 +3,11 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Router } from '@angular/router';
+import { iAuthRequest } from 'src/app/core/interfaces/auth';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login-form',
@@ -10,9 +15,25 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./login-form.component.scss']
 })
 
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent {
 
-  constructor() { }
+  constructor(private auth:AuthService, private router:Router) { }
+
+  //Hecho usando NgModel
+  authData:iAuthRequest = {
+    userName : "",
+    password : ""
+  };
+
+  async login(form:NgForm){
+    //Valor del formulario para no usar NgModel
+    console.log(form.value);
+    const token = await this.auth.login(form.value);
+    if(token) this.router.navigate(['']);
+  }
+
+
+
 
   ngOnInit(): void {
   }
