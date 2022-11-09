@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { BACKEND_URL } from '../constants/backend';
 import { iAuthRequest } from '../interfaces/auth';
 import { ISession } from '../interfaces/session.interface';
-
 @Injectable({
     providedIn: 'root',
 })
