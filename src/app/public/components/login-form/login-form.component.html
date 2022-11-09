@@ -2,23 +2,16 @@
 <button [routerLink]="['/contacts']"> Ir a Contactos </button> -->
 <div class="forms-container">
   <div class="signin-signup">
-    <form (ngSubmit)="login(form)" #form="ngForm" class="sign-in-form">
+    <form action="#" class="sign-in-form">
       <h2 class="title">Sign in</h2>
-      <div class="inputs">
-        <label for="email">Email</label>
-      <input type="email" name="email" id="email" autocomplete="email" placeholder="Type your email address"
-        [(ngModel)]="authData.userName" #email="ngModel" pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
-      >
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" />
       </div>
-      <p *ngIf="email.touched && email.errors">Correo electrónico no válido.</p>
-      <div class="inputs">
+      <div class="input-field">
         <i class="fas fa-lock"></i>
-        <label for="password">Password</label>
-      <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Type your password"
-        [(ngModel)]="authData.password" [required]="true" [minlength]="6" #password="ngModel"
-      >
+        <input type="password" placeholder="Password" />
       </div>
-      <div *ngIf="password.touched && password.errors">La contraseña debe tener al menos 6 caracteres.</div>
       <a [routerLink]="['/contacts']">
         <input type="submit" value="Login" class="btn solid" />
       </a>
@@ -45,5 +38,5 @@
         </a>
       </div>
     </form>
-  </div>
+  </div>
 </div>
