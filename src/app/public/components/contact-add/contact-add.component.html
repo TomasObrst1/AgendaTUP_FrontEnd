@@ -1,33 +1,115 @@
-<nav>
+<html>
+
+
+<header>
+
+    <div class="contenedor-titulos">
+
+        <h1> Agregar contactos </h1>
+        <h2 id="uni">
+            Programacion Web - Universidad Austral
+
+            <button [routerLink]="['/contacts']" id="botonVolver">Volver</button>
+
+        </h2>
+    </div>
+
+
     <div class="Contenedor">
 
-     <h1> Agregar contactos </h1>
-     
-            <p id="Ingrese"> Ingrese los datos del nuevo contacto :</p>
-    
-        
-            <p>Nombre:</p>
-            <input type="search" name="" placeholder="Nombre" id="Nombre">
+        <h2 id="Ingrese"> Ingresar los datos del nuevo contacto :</h2>
 
-            <p>Apellido:</p>
-            <input type="search" name="" placeholder="Apellido" id="Apeliido">
-            
-            <p>Telefono:</p>
-            <input type="search" name="" placeholder="Telefono" id="Telefono">
+        <form class="shadow-lg row mt-4" autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
 
-            <p>Email:</p>
-            <input type="search" name="" placeholder="Email" id="Email">
+            <div>
 
-            <p>Fecha cumpleaños:</p>
-            <input type="search" name="" placeholder="Fecha cumpleaños" id="cumpleaños">
-         
-         
-            
-            
-            <button class="btn transparent" id="AgregarContacto"> Agregar </button>
-            <button class="btn transparent" [routerLink]="['/contacts']" id="botonVolver"> Volver </button>
-            
-        </div>
-        
-    </nav>
-    
+
+                <div class="form-group row">
+                    <label class="col-1 offset-md-3 col-form-label">Nombre:</label>
+                    <div class="col-4">
+                        <input for="nombre" class="form-control" type="text" name="nombre" [ngModel]="usuarios.nombre"
+                            placeholder="Nombre" #nombre="ngModel" [class.is-invalid]="nombre.invalid && nombre.touched"
+                            required>
+
+                        <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger"> El nombre es
+                            obligatorio</small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Apellido" class="col-1 offset-md-3 col-form-label">Apellido:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="apellido" [ngModel]="usuarios.apellido"
+                            placeholder="apellido" #apellido="ngModel"
+                            [class.is-invalid]="apellido.invalid && apellido.touched" required>
+
+                        <small *ngIf="apellido.invalid && apellido.touched" class="form-text text-danger"> El
+                            apellido es obligatorio</small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Celular" class="col-1 offset-md-3 col-form-label">Numero Celular:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="number" name="celular" [ngModel]="usuarios.celular"
+                            placeholder="celular" #celular="ngModel"
+                            [class.is-invalid]="celular.invalid && celular.touched" required>
+
+                        <small *ngIf="celular.invalid && celular.touched" class="form-text text-danger"> El celular
+                            es obligatorio</small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Telfono-casa" class="col-1 offset-md-3 col-form-label">Tel casa:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="number" name="telefono" [ngModel]="usuarios.telefono"
+                            placeholder="telefono" #telefono="ngModel"
+                            [class.is-invalid]="telefono.invalid && telefono.touched" required>
+
+                        <small *ngIf="telefono.invalid && telefono.touched" class="form-text text-danger"> El
+                            telefono es obligatorio</small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Email" class="col-1 offset-md-3 col-form-label">Email:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="email" name="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [ngModel]="usuarios.email"
+                            placeholder="Email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"
+                            required>
+
+                        <small *ngIf="email.invalid && email.touched" class="form-text text-danger"> El email es
+                            obligatorio</small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Cumple" class="col-1 offset-md-3 col-form-label">Fecha cumpleaños:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="date" name="cumple" [ngModel]="usuarios.cumple"
+                            placeholder="Fecha cumpleaños" #cumple="ngModel"
+                            [class.is-invalid]="cumple.invalid && cumple.touched" required>
+
+                        <small *ngIf="cumple.invalid && cumple.touched"
+                            class="form-text text-danger">Obligatorio</small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-1 offset-md-3 col-form-label">&nbsp;</label>
+                    <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary btn-block"> Agregar contacto</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </form>
+    </div>
+
+</header>
+
+</html>

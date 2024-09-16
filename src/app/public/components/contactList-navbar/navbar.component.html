@@ -1,27 +1,43 @@
-<header>
-    <nav>
-        <div class="navbarText-container">
-            <h1> Lista de Contactos </h1>
-            <p> Programacion Web - Universidad Austral </p>
-        </div>
-    
-        <input type="search" name="" placeholder="Buscar contacto..." id="buscador">
+<nav>
+  <div class="titulo-container">
+    <h1> Proyecto Programacion Web </h1>
+    <p> Universidad Austral de Rosario </p>
+  </div>
 
-        <div class="navbarBtns-container">
+  <div class="buscador-container">
+    <input
+      type="search"
+      name=""
+      placeholder="Buscar contacto..."
+      id="buscador"
+    />
+    <button> <fa-icon [icon]="iconoBuscador" class="iconoBuscador"> </fa-icon> </button>
+  </div>
 
-            
-        <button [routerLink]="['/addContact']" class="agregarContacto-Btn"> Agregar contacto </button>
+  <div ngbDropdown class="d-inline-block">
+    <button
+      type="button"
+      class="btn btn-outline-primary btnDropdown"
+      id="dropdownBasic1"
+      ngbDropdownToggle
+    >
+      Perfil
+    </button>
 
-            <div ngbDropdown class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary btnDropdown" id="dropdownBasic1" ngbDropdownToggle> Perfil </button>
-                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button ngbDropdownItem> Ver perfil </button>
-                  <button ngbDropdownItem> Modo oscuro </button>
-                  <button ngbDropdownItem> Cerrar sesion </button>
-                </div>
-              </div>
-        </div>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="perfil-subMenu">
+      <button ngbDropdownItem class="submenu-btn"> 
+        <fa-icon [icon]="iconoUser"></fa-icon>
+        Ver perfil</button>
+      <button ngbDropdownItem submenu-btn>
+        <fa-icon [icon]="iconoMoon"> </fa-icon>
+        Modo oscuro</button>
+      <button ngbDropdownItem submenu-btn>
+        <fa-icon [icon]="iconoExit"></fa-icon>
+        Cerrar sesion</button>
+    </div>
+  </div>
+</nav>
 
-    </nav>
-    
-</header>
+<button [routerLink]="['/addContact']" class="agregarContacto-Btn"> 
++
+</button>

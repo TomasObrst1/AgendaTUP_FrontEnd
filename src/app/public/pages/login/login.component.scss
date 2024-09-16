@@ -3,12 +3,13 @@
 	width: 100%;
 	background-color: #fff;
 	min-height: 100vh;
+	min-width: 100vw;
 	overflow: hidden;
 	&:before {
 		content: "";
 		position: absolute;
 		height: 2000px;
-		width: 2000px;
+		width: 1800px;
 		top: -10%;
 		right: 48%;
 		transform: translateY(-50%);

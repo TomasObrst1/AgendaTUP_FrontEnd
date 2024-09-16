@@ -1,89 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
-
 nav {
-    width: 70vw;
-    height: 100px;
-    color: #dedede;
-    color: #111;
-    font-family: 'Roboto';
+  width: 100vw;
+  margin: 0 auto;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 2px 15px 0px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 5px 2px 15px 0px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 5px 2px 15px 0px rgba(0, 0, 0, 0.37);
 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  .titulo-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+    left: -30px;
 
-    .navbarText-container {
+    h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
 
-        h1 {
-            font-size: 1.6rem;
-        }
-        p {
-            font-size: 0.9rem
-        };
+  .buscador-container {
+    display: flex;
+    position: relative;
+    left: -80px;
+
+    input,
+    button {
+      height: 40px;
+      border-radius: 10px;
+      margin: 0 3px;
     }
 
     input {
-        border-radius: 20px;
-        width: 300px;
-        height: 50px;
-        border: 1px solid grey;
-        outline: none;
-
-        ::content {
-            padding-left: 10px;
-        }
+      outline: none;
+      border: 1px solid rgb(108, 108, 108);
+      width: 220px;
+      ::content {
+        padding-left: 10px;
+      }
     }
 
-    .navbarIcons-container {
-        display: flex;
-        align-items: baseline;
+    button {
+      width: 30px;
+      background-color: rgb(197, 17, 17);
+      border: none;
 
-        p {
-            margin: 0 10px;
-        }
-    }
-
-    .navbarBtns-container {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .agregarContacto-Btn {
-        width: 200px;
-        background: rgb(157,0,148);
-        background: linear-gradient(90deg, rgba(157,0,148,1) 1%, rgba(255,46,0,1) 100%);
-        border: none;
-        outline: none;
-        height: 50px;
-        border-radius: 10px;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 0.9rem;
-        margin: 10px 0;
-        cursor: pointer;
-        transition: 0.5s;
-    }
-        
-    .btnDropdown {
-        background: rgb(157,0,148);
-        background: linear-gradient(90deg, rgba(157,0,148,1) 1%, rgba(255,46,0,1) 100%);
-        border: none;
+      .iconoBuscador {
         color: white;
-        height: 50px;
-        width: 150px;
-        font-weight: 400;
-        font-size: 0.9rem;
-        text-transform: uppercase;
+      }
     }
+  }
+
+  .btnDropdown {
+    background-color: rgb(197, 17, 17);
+    border: none;
+    color: white;
+    height: 45px;
+    width: 100px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    position: relative;
+    left: -30px;
+    margin: 0;
+  }
 }
 
 
+// -------------
+
+.agregarContacto-Btn {
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(197, 17, 17);
+    border: none;
+    color: white;
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}

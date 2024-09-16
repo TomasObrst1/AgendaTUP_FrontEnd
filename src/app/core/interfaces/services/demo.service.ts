@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+// muestra el estado de la api por consola
 @Injectable({
   providedIn: 'root'
 })
@@ -23,3 +23,5 @@ export class DemoService {
 
     // Seguir viendo el archivo pages/contacts-list/contact-list.component.ts
 }
+
+

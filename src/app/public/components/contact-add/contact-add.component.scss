@@ -1,76 +1,97 @@
-.contenedor{
-	
-	position:relative;
+header {
+
+	position: absolute;
 	width: 100%;
-	height: 200%;
+	height: 100%;
 	
 }
-.btn {
-	
-	
-	width: 150px;
-	background-color: #c30000;
-	border: none;
-	outline: none;
-	height: 49px;
-	border-radius: 49px;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 600;
-	margin: 250px 0 10px;
-	
-	cursor: pointer;
-	transition: 0.5s;
-	&:hover {
-		background-color: #c60505;
+
+.Contenedor {
+
+	//position: relative;
+	//max-width: 100%;
+	//max-height: 100%;
+	//height: max-content;
+	//min-height: 100vh;
+	//min-width: 100vw;
+	// justify-content: center;
+	// align-items: center;
+
+}
+
+.row {
+	margin: 1%;
+}
+
+
+.contenedor-titulos {
+	background-color: rgb(231, 231, 231);
+		
+
+	h1 {
+		font-size: x-large;
+		margin-left: 15px;
+		font-weight: 600;
 	}
+
+	#uni {
+		font-size: medium;
+		margin-top: 0px;
+		text-align: left;
+		margin-left: 15px;
+	}
+
+	#botonVolver {
+		
+		margin-left: 900px;
+		margin-block-end: auto;
+		width: 70px;
+		background-color: #c30000;
+		border: none;
+		outline: none;
+		height: 30px;
+		border-radius: 10px;
+		color: #fff;
+		text-transform: uppercase;
+		//font-weight: 600;
+		//margin: 120px 0 10px;
+
+
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: #c60505;
+		}
+
+	}
+
+
 }
-h1{
 
-	background-color:beige;
-	height: 100px;
-	text-align: center;
-	font-size: xx-large;
-	font-family: sans-serif ;
-	font-style:normal ;
-	
-} 
+h1 {
 
-#Ingrese{
 
-	margin-left: 550px;
-
-	font-size: x-large;
-	height: 80px;
-	
-
-}
-
-p {
-
-	font-size: large;
-	margin-left: 600px;
-	
-}
-
-input{
 	height: 25px;
-	width: 300px;
-	margin-left: 600px;
+	margin-top: 1px;
+	text-align: left;
+	//font-size: x-large;
+	font-family: sans-serif;
+	font-style: normal;
 
 }
 
-#botonVolver{
-
-	position:relative;
-	margin-left: -600px;
-
-}
-
-#AgregarContacto{
+h2 {
 
 	position: relative;
-	margin-left: 900px ;
-	
+	align-items: center;
+	margin-left: 35%;
+	margin-top: 25px;
+
+	// margin-top: 25px;
+	// margin-left: 40%;
+	font-weight: 500;
+	font-size: x-large;
+	height: 45px;
 }
 

@@ -14,6 +14,14 @@ const routes: Routes = [
     path: "addContact",
     loadChildren: () => import('./public/pages/add-contacts/add-contacts.module').then(m => m.AddContactsModule) 
   },
+  {
+    path: "detalleContacto",
+    loadChildren: () => import('./public/pages/contact-details/contact-details.module').then(m => m.ContactDetailsModule)
+  },
+  {
+    path: "contactBlock",
+    loadChildren: () => import('./public/pages/contacts-block/contacts-block.module').then(m => m.ContactsBlockModule)
+  }
 ];
 
 @NgModule({

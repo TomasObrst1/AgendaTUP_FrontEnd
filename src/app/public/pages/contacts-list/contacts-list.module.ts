@@ -8,7 +8,7 @@ import { NavbarComponent } from '../../components/contactList-navbar/navbar.comp
 import { ContactListListComponent } from '../../components/contactList-list/contact-list-list.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ContactListCardComponent } from '../../components/contact-list-card/contact-list-card.component';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -17,7 +17,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactsListComponent,
     NavbarComponent,
     ContactListListComponent,
-    ContactListCardComponent
   ],
   imports: [
     CommonModule,
