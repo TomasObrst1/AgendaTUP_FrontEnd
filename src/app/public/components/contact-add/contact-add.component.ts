@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-add',
@@ -7,9 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactAddComponent implements OnInit {
 
-  constructor() { }
+  usuarios  = {
 
+    nombre : "",
+    apellido : "",
+    celular :"",
+    telefono : "",
+    email :"",
+    cumple:""
+  }
+
+  constructor() { }
+  
   ngOnInit(): void {
+  }
+
+  guardar(forma: NgForm){
+
+    if (forma.invalid) {
+      Object.values(forma.controls).forEach(control =>{
+        
+        control.markAsTouched();
+      })
+
+      return;
+      
+    }
+
+    console.log(forma.value);
+
   }
 
 }
